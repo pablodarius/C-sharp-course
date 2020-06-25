@@ -6,22 +6,25 @@ empezamos!!!
 namespace PrimeraAplicacion
 {
     class Program
-    {
+    { 
         static void Main(string[] args)
         {
-            const int VALOR = 5; //por convención, en mayúsculas
-            const int OTROVALOR = 10;
-            //VALOR = 3; //da error no se puede cambiar
-            System.Console.WriteLine("Las constantes son: {0} y {1}", VALOR, OTROVALOR); //atajo de teclado cw //otra manera de poner los datos en el cw
+            System.Console.WriteLine(Suma(1,2));
+            System.Console.WriteLine(Suma(1,2,3));
+            System.Console.WriteLine(Suma(1,2,3.2));
+        }
 
-            const double PI = 3.1416;
-            Console.WriteLine("Introduce el radio:");
-            double radio = double.Parse(Console.ReadLine());
+        //sobrecarga de métodos, se puede sobrecargar, mismo nomrbe si cambia algo en los parametros, o numero o tipos
+        static int Suma(int op1, int op2) => op1 + op2;
+        static int Suma(int op1, int op2, int op3) => op1 + op2 + op3;
+        static double Suma(int op1, int op2, double op3) => op1 + op2 + op3;
+        /***********************************************/
 
-            System.Console.WriteLine($"El área de la circunferencia es {Math.Pow(radio, 2) * PI}"); //clase Math, el método potencia con dos parametros (num, elevado a cuánto)
-            //la clase Math también tiene constantes y se podría haber usado la constante pi Math.pi
+        //ámbito
+        static void primer() => System.Console.WriteLine(num1 + num2);
+        static void segundo() => System.Console.WriteLine(num1 + num2);
 
-        }            
-          
+        static int num1 = 5; //con ambito de clase lass variables son campos de clase y accesibles por todos los mçetodos de la clase da igual crearlos después
+        static int num2 = 7;
     }
 }
