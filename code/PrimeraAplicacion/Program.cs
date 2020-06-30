@@ -9,22 +9,51 @@ namespace PrimeraAplicacion
     { 
         static void Main(string[] args)
         {
-            System.Console.WriteLine(Suma(1,2));
-            System.Console.WriteLine(Suma(1,2,3));
-            System.Console.WriteLine(Suma(1,2,3.2));
-        }
+            /*System.Console.WriteLine("¿Damos vueltas?");
+            string respuesta = Console.ReadLine();
+            while (respuesta != "no") {
+                System.Console.WriteLine("vueltas...");
+                System.Console.WriteLine("Te llamabas...");
+                string nombre = Console.ReadLine();
+                System.Console.WriteLine($"Oye {nombre}, Saldrás del bucle cuando me digas no...");
+                System.Console.WriteLine("¿Seguimos?");
+                respuesta = Console.ReadLine();
+            }
+            System.Console.WriteLine("Acabamos!!!");
 
-        //sobrecarga de métodos, se puede sobrecargar, mismo nomrbe si cambia algo en los parametros, o numero o tipos
-        static int Suma(int op1, int op2) => op1 + op2;
-        static int Suma(int op1, int op2, int op3) => op1 + op2 + op3;
-        static double Suma(int op1, int op2, double op3) => op1 + op2 + op3;
-        /***********************************************/
+            // Adivina un número del 0 al 100 en mayor-menor 
+            Random number = new Random();
+            int n = number.Next(0, 100);
 
-        //ámbito
-        static void primer() => System.Console.WriteLine(num1 + num2);
-        static void segundo() => System.Console.WriteLine(num1 + num2);
+            System.Console.WriteLine("Guess the Number...");
+            int userNum = Int32.Parse(Console.ReadLine());
+            while (n != userNum) {
+                System.Console.WriteLine("Wrong!");
+                if (userNum > n) {
+                    System.Console.WriteLine("Less please, try again...");
+                } else {
+                    System.Console.WriteLine("More please, try again...");
+                }
 
-        static int num1 = 5; //con ambito de clase lass variables son campos de clase y accesibles por todos los mçetodos de la clase da igual crearlos después
-        static int num2 = 7;
+                System.Console.WriteLine("Guess the Number...");
+                userNum = Int32.Parse(Console.ReadLine());
+            }
+            System.Console.WriteLine($"Yaaaaaaaaaaaaassssssss, well done! the number was {n}");*/
+
+            // Adivina un número del 0 al 100 en mayor-menor 
+            Random number = new Random();
+            int n = number.Next(0, 100);
+            int attempts = 0;
+            int userNum;
+            do {
+                System.Console.WriteLine("Guess the Number...");
+                userNum = Int32.Parse(Console.ReadLine());
+                attempts++;
+
+                if (userNum > n) System.Console.WriteLine("Less please, try again...");
+                if (userNum < n) System.Console.WriteLine("More please, try again...");
+            } while (n != userNum);
+            System.Console.WriteLine($"Yaaaaaaaaaaaaassssssss, well done! the number was {n} and you have needed {attempts} attemps");
+        }        
     }
 }
