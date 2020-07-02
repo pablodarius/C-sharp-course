@@ -2,7 +2,7 @@
 /*
 Primer ejemplo de hola mundo
 empezamos!!!
-*/
+
 namespace PrimeraAplicacion
 {
     class Program
@@ -38,7 +38,7 @@ namespace PrimeraAplicacion
                 System.Console.WriteLine("Guess the Number...");
                 userNum = Int32.Parse(Console.ReadLine());
             }
-            System.Console.WriteLine($"Yaaaaaaaaaaaaassssssss, well done! the number was {n}");*/
+            System.Console.WriteLine($"Yaaaaaaaaaaaaassssssss, well done! the number was {n}");
 
             // Adivina un número del 0 al 100 en mayor-menor 
             Random number = new Random();
@@ -59,7 +59,7 @@ namespace PrimeraAplicacion
                     System.Console.WriteLine("Has introducido un valor demasiado grande"); 
                 } catch (Exception ex) { // para recoger la general exception, podría solo ponerse catch {}, pero es mala practica
                     System.Console.WriteLine("No has introducido un valor válido: " + ex.Message);
-                }*/
+                }
                 // para excepcionies con filtro si queremos un tratamiento especial a un, se pone la general con el when
                 } catch (Exception ex) when (ex.GetType() != typeof(FormatException)) { //catch para todas menos la FormatException
                     System.Console.WriteLine("No has introducido un valor válido: " + ex.Message);
@@ -70,11 +70,14 @@ namespace PrimeraAplicacion
             System.Console.WriteLine($"Yaaaaaaaaaaaaassssssss, well done! the number was {n} and you have needed {attempts} attemps");
             System.Console.WriteLine("A partir de esta línea de código el programa continuaría");
 
-            checked { //sin esto, el desbordamiento aritmetico, el compilador lo maneja y devuelve un valor negativo grande como valor erroneo
-                int numero = int.MaxValue;
-                numero += 20;
-                System.Console.WriteLine(numero);
-            } //se puede poner en el IDE que el checked esta aticado sin ponerlo nosotros para todo lo aritmetico
+            checked { //sin esto, el desbordamiento aritmetico, el compilador lo maneja y devuelve un valor negativo grande como valor erroneo, solo para INT y LONG
+                int num = int.MaxValue;
+                num += 20; // int resultado = unchecked(numero += 20); para que justo esa línea no vaya checkeada en este bloque checked
+                System.Console.WriteLine(num);
+            } //se puede poner en el IDE que el checked esta activado sin ponerlo nosotros para todo lo aritmetico
+            //se puede hacer de forma abreviada sobre la línea que necesita el checked
+            int numero = int.MaxValue;
+            int resultado = checked(numero += 20);
         }        
     }
-}
+}*/
