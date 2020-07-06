@@ -1,0 +1,13 @@
+D:\Cursos\Curso c sharp\code\pooAPP\bin\Debug\netcoreapp3.1\pooAPP.exe
+D:\Cursos\Curso c sharp\code\pooAPP\bin\Debug\netcoreapp3.1\pooAPP.deps.json
+D:\Cursos\Curso c sharp\code\pooAPP\bin\Debug\netcoreapp3.1\pooAPP.runtimeconfig.json
+D:\Cursos\Curso c sharp\code\pooAPP\bin\Debug\netcoreapp3.1\pooAPP.runtimeconfig.dev.json
+D:\Cursos\Curso c sharp\code\pooAPP\bin\Debug\netcoreapp3.1\pooAPP.dll
+D:\Cursos\Curso c sharp\code\pooAPP\bin\Debug\netcoreapp3.1\pooAPP.pdb
+D:\Cursos\Curso c sharp\code\pooAPP\obj\Debug\netcoreapp3.1\pooAPP.csprojAssemblyReference.cache
+D:\Cursos\Curso c sharp\code\pooAPP\obj\Debug\netcoreapp3.1\pooAPP.AssemblyInfoInputs.cache
+D:\Cursos\Curso c sharp\code\pooAPP\obj\Debug\netcoreapp3.1\pooAPP.AssemblyInfo.cs
+D:\Cursos\Curso c sharp\code\pooAPP\obj\Debug\netcoreapp3.1\pooAPP.csproj.CoreCompileInputs.cache
+D:\Cursos\Curso c sharp\code\pooAPP\obj\Debug\netcoreapp3.1\pooAPP.dll
+D:\Cursos\Curso c sharp\code\pooAPP\obj\Debug\netcoreapp3.1\pooAPP.pdb
+D:\Cursos\Curso c sharp\code\pooAPP\obj\Debug\netcoreapp3.1\pooAPP.genruntimeconfig.cache
