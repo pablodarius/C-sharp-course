@@ -6,22 +6,36 @@ namespace pooAPP
     {
         static void Main(string[] args)
         {
-            Circulo miCirculo; // Variable/objeto de tipo circulo
-            miCirculo = new Circulo(); // iniciacion de variable/objeto de tipo circulo. Instanciacion = ejemplarizacion = creacion de ejemplar de clase
-            System.Console.WriteLine(miCirculo.calculoArea(5));
-
-            Circulo miCirculo2 = new Circulo();
-            System.Console.WriteLine(miCirculo.calculoArea(8));
+           Coche unCoche = new Coche();
+           Coche otroCoche = new Coche(2000, 1000);
+           System.Console.WriteLine(unCoche.getInfo());
+           System.Console.WriteLine(otroCoche.getInfo());
         }
     }
 
-     class Circulo
-    {
-        const double pi = 3.1416; //propiedad o campo de clase, constante
-
-        public double calculoArea(int radio) { // metodo de clase
-            return pi * radio * radio;
+    class Coche
+    { //si una clase no tiene constructor, c# pone uno por defecto que se llame igual que la clase y está vacío, pero existe
+        public Coche()
+        {
+            ruedas = 4;
+            largo = 2300.5;
+            ancho = 0.800;
         }
+         //con más de un constructor, sobrecarga de constructores. son igual pero con distinto numero de parámetros
+         public Coche(double largoCoche, double anchoCoche)
+        {
+            ruedas = 4;
+            largo = largoCoche;
+            ancho = anchoCoche;
+        }
+
+        private int ruedas;
+        private double largo;
+        private double ancho;
+        private bool climatizador;
+        private string tapiceria;
+
+        public String getInfo() => $"Información del coche ruedas: {ruedas}, larg: {largo} y ancho: {ancho}";
 
     }
 }
